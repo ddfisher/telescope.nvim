@@ -41,7 +41,7 @@ end
 
 git.commits = function(opts)
   local results = utils.get_os_command_output({
-    'git', 'log', '--pretty=oneline', '--abbrev-commit', '--', '.'
+    'git', 'log', '--pretty=oneline', '--abbrev-commit'
   }, opts.cwd)
 
   pickers.new(opts, {
